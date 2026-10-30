@@ -15,9 +15,9 @@ void init_gemm_detector(void) {
     gemm_meta_cache = g_hash_table_new_full(g_direct_hash, g_direct_equal, NULL, g_free);
     // printf("\n[FMA Profiler] Initializing Offline Profile Loader...\n");
 
-    FILE *fp = fopen("/path/to/FMAccel/detector/fma_profile.txt", "r");
+    FILE *fp = fopen("/path/to/FMAccel/detector/offline-analysis.txt", "r");
     if (fp == NULL) {
-        printf("[FMA Profiler] Warning: 'fma_profile.txt' not found.\n\n");
+        printf("[FMA Profiler] Warning: 'offline-analysis.txt' not found.\n\n");
         return;
     }
 
